@@ -9,6 +9,7 @@
           type="text/css">
     <link href="stylesheets/prism.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/presentation.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print">
 </head>
 <body>
@@ -73,29 +74,95 @@
 
     <section>
         <div class="content">
+            <h2>Pseudo elements</h2>
+            <div class="demo">
+                <div class="demoShow" id="demoPseudo">
+                </div>
+                <div class="demoCode">
+<pre><code class="liveCoding language-css css" data-livecoding-id="demoPseudo" contenteditable spellcheck="false">
+.alert-error {
+    background-color: #F2DEDE;
+    border-color: #EED3D7;
+    color: #B94A48;
+    padding: 8px 14px;}
+.alert-error:before {
+    content: ''; /* \f071 */
+    font-size: 1em;
+    float: none;
+    padding-right: 0px;
+    font-family: Baskerville; }
+.alert-error:after {
+    content: '';
+    display: block;
+    clear: none; }
+</code></pre>
+<pre><code class="liveCoding language-markup html" data-livecoding-id="demoPseudo" contenteditable spellcheck="false">
+<div class="alert alert-error">
+    <b>Heads up!</b> This alert needs your attention, but it's not super important.
+</div>
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content content--text">
+            <h2>Pseudo elements</h2>
+            <div class="pgroup">
+                <p>Ne pas utiliser les pseudo éléments :</p>
+                <ul>
+                    <li>Un HTML plus lourd et moins réutilisable</li>
+                    <li>Diminue la lisibilité et la maintenabilité</li>
+                </ul>
+                <p>Plus d'infos : <a href="http://bit.ly/pseudoEl">http://bit.ly/pseudoEl</a> by Chris Coyier</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
             <h2>Table layout</h2>
             <div class="demo">
                 <div class="demoShow" id="demoTable">
                 </div>
                 <div class="demoCode">
 <pre><code class="liveCoding language-css css" data-livecoding-id="demoTable" contenteditable spellcheck="false">
-.parent {
+.container {
     display: table;
     width: 100%;
     table-layout: fixed; }
 .element {
-    display: table-cell; }
+    display: block; }
 .greenElement {
     }
 </code></pre>
 <pre><code class="liveCoding language-markup html" data-livecoding-id="demoTable" contenteditable spellcheck="false">
-<div class="parent">
+<div class="container">
     <div class="element greenElement" data-at="display"> </div>
     <div class="element redElement" data-at="display"> </div>
     <div class="element blueElement" data-at="display"> </div>
 </div>
 </code></pre>
                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content content--text">
+            <h2>Table layout</h2>
+            <div class="pgroup">
+                <p>Ne pas utiliser les table layout implique :</p>
+                <ul>
+                    <li>Perte de temps de développement</li>
+                    <li>Tire la technologie vers le bas</li>
+                    <li>Va être un frein au responsif</li>
+                </ul>
+                <p>Plus d'infos : <a href="http://bit.ly/tableLayout">http://bit.ly/tableLayout</a> by Rachel Andrew</p>
             </div>
         </div>
     </section>
