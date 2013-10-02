@@ -2,7 +2,7 @@
 /* Slides
  ====================================================*/
 body {
-    background: #FFF;
+    background: #C3E3EB;
     font-family: "Source Sans Pro";
     color: #141414;
     margin: 0;
@@ -183,7 +183,8 @@ section .classy {
 section .classyNote {
     display: block;
     text-align: center;
-    background: #F5F2F0;
+    color: #FFF;
+    background: #111111;
     padding: 1em;
 }
 
