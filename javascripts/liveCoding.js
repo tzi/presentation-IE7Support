@@ -40,6 +40,15 @@ var LiveCoding = (function() {
 		// if it's CSS
 		if(isCSS){
 
+            var baseId = code.attributes.getNamedItem('data-livecoding-baseId');
+            if (baseId) {
+                baseId = baseId.nodeValue;
+                var base = document.getElementById(baseId)
+                if (base) {
+                    val = base.textContent + val;
+                }
+            }
+
 			// if PrefixFree is here
 			if(typeof PrefixFree !== "undefined"){
 				// prefix code
@@ -50,7 +59,11 @@ var LiveCoding = (function() {
 			val = val.replace(/^\s+/g,'').replace(/\s+$/g,'');
 			val = val.split(/(\{|\})/g);
 			for(var i = 0; i < val.length - 1; i+=4){
-				val[i] = '#' + id + ' ' + val[i];
+                var selectors = val[i].split(',');
+                for(var j = 0; j < selectors.length; j++){
+                    selectors[j] = '#' + id + ' ' + selectors[j];
+                }
+                val[i] = selectors.join(',');
 			}
 			val = val.join('');
 

@@ -67,7 +67,7 @@
 
     <section>
         <div class="content content--card content--dark">
-            <h1>Internet Explorer 7</h1>
+            <h1>Démonstrations IE8</h1>
         </div>
     </section>
 
@@ -79,12 +79,14 @@
                 <div class="demoShow" id="demoPseudo">
                 </div>
                 <div class="demoCode">
-<pre><code class="liveCoding language-css css" data-livecoding-id="demoPseudo" contenteditable spellcheck="false">
+<div style="display: none" id="demoBasePseudo">
 .alert-error {
     background-color: #F2DEDE;
     border-color: #EED3D7;
     color: #B94A48;
     padding: 8px 14px;}
+</div>
+<pre><code class="liveCoding language-css css" data-livecoding-id="demoPseudo" data-livecoding-baseId="demoBasePseudo" contenteditable spellcheck="false">
 .alert-error:before {
     content: ''; /* \f071 */
     font-size: 1em;
@@ -116,7 +118,44 @@
                     <li>Augmentation du poids du DOM HTML</li>
                     <li>Diminution de la lisibilité et de la maintenabilité</li>
                 </ul>
-                <p>Plus d'infos : <a href="http://bit.ly/pseudoEl">http://bit.ly/pseudoEl</a> by Chris Coyier</p>
+                <p>Plus d'infos : <a href="http://bit.ly/pseudoEl">http://bit.ly/pseudoEl</a> (Chris Coyier)</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>Box sizing</h2>
+            <div class="demo">
+                <div class="demoShow" id="demoBox">
+                </div>
+                <div class="demoCode">
+<pre><code class="liveCoding language-css css" data-livecoding-id="demoBox" contenteditable spellcheck="false">
+.greenElement,
+.redElement {
+    float: left;
+    width: 50%;}
+</code></pre>
+<pre><code class="liveCoding language-markup html" data-livecoding-id="demoBox" contenteditable spellcheck="false">
+    <div class="greenElement" data-at="-moz-box-sizing"> </div>
+    <div class="redElement" data-at="-moz-box-sizing"> </div>
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content content--text">
+            <h2>Box sizing</h2>
+            <div class="pgroup">
+                <p>Ne pas utiliser les box-sizing :</p>
+                <ul>
+                    <li>Diminution de la lisibilité et de la maintenabilité</li>
+                </ul>
+                <p>Plus d'infos : <a href="http://bit.ly/boxSizing">http://bit.ly/boxSizing</a> (Roger Johansson)</p>
             </div>
         </div>
     </section>
@@ -129,21 +168,25 @@
                 <div class="demoShow" id="demoTable">
                 </div>
                 <div class="demoCode">
-<pre><code class="liveCoding language-css css" data-livecoding-id="demoTable" contenteditable spellcheck="false">
+<div style="display: none" id="demoBaseTable">
 .container {
     display: table;
     width: 100%;
     table-layout: fixed; }
-.element {
+</div>
+<pre><code class="liveCoding language-css css" data-livecoding-id="demoTable" data-livecoding-baseId="demoBaseTable" contenteditable spellcheck="false">
+.greenElement,
+.redElement,
+.blueElement {
     display: block; }
 .greenElement {
     }
 </code></pre>
 <pre><code class="liveCoding language-markup html" data-livecoding-id="demoTable" contenteditable spellcheck="false">
 <div class="container">
-    <div class="element greenElement" data-at="display"> </div>
-    <div class="element redElement" data-at="display"> </div>
-    <div class="element blueElement" data-at="display"> </div>
+    <div class="greenElement" data-at="display"> </div>
+    <div class="redElement" data-at="display"> </div>
+    <div class="blueElement" data-at="display"> </div>
 </div>
 </code></pre>
                 </div>
@@ -162,8 +205,15 @@
                     <li>Un frein pour d'autres navigateurs</li>
                     <li>Travail en double ?</li>
                 </ul>
-                <p>Plus d'infos : <a href="http://bit.ly/tableLayout">http://bit.ly/tableLayout</a> by Rachel Andrew</p>
+                <p>Plus d'infos : <a href="http://bit.ly/tableLayout">http://bit.ly/tableLayout</a> (Rachel Andrew)</p>
             </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content content--card content--dark">
+            <h1>Parlons d'IE7</h1>
         </div>
     </section>
 
